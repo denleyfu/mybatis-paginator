@@ -1,6 +1,5 @@
 package com.github.miemiedev.mybatis.paginator.domain;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -43,5 +42,14 @@ public class PageList<E> extends ArrayList<E> {
 		return paginator;
 	}
 
+	private void writeObject(java.io.ObjectOutputStream s) throws java.io.IOException {
+		s.defaultWriteObject();
+		s.writeObject(this.paginator);
+	}
+
+	private void readObject(java.io.ObjectInputStream s) throws java.io.IOException, ClassNotFoundException {
+		s.defaultReadObject();
+		this.paginator = (Paginator) s.readObject();
+	}
 	
 }
