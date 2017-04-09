@@ -1,3 +1,5 @@
+**在原版本的基础上，修改了PageList类，使PageList中的属性paginator不会在序列化的时候丢失**
+
 Support Mybatis version >= 3.1
 
 Basic usage -->  [here](https://github.com/miemiedev/mybatis-paginator/blob/master/src/test/java/com/github/miemiedev/mybatis/paginator/PaginatorTester.java)
